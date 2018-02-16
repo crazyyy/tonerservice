@@ -1,6 +1,6 @@
 {
-  "domain": "wp-framework.work",
-  "theme": "wp-framework",
+  "domain": "tonerservice.work",
+  "theme": "wp-tonerservice",
   "path": {
     "base": {
       "src":"assets/",
