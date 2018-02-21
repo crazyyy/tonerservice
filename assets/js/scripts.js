@@ -80,3 +80,12 @@ jQuery(document).ready(function() {
     mainClass: 'my-mfp-slide-bottom'
   });
 });
+jQuery(function() {
+  jQuery('.shem-slider').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: '<img src="/wp-content/themes/wp-tonerservice/img/st-left.png" class="st-left">',
+    nextArrow: '<img src="/wp-content/themes/wp-tonerservice/img/st-right.png" class="st-right">'
+  });
+});

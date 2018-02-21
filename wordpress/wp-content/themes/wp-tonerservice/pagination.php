@@ -1,3 +1,3 @@
-<div class="pagination">
+<nav id="nav-posts">
   <!-- noindex --><?php html5wp_pagination(); ?><!-- /noindex -->
-</div><!-- /pagination -->
+</nav><!-- /pagination -->

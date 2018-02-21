@@ -19,29 +19,21 @@
   <![endif]-->
   <!-- css + javascript -->
   <?php wp_head(); ?>
+
 </head>
+
 <body <?php body_class(); ?>>
-<!-- wrapper -->
-<div class="wrapper">
-  <header role="banner">
-    <div class="inner">
+  <div data-delay="1000" class="w-dropdown w-hidden-main  bubble-out-menu">
+    <div class="w-dropdown-toggle bubble-out-toggle">
+      <div data-ix="menu-button" class="bubble-out-title">+</div>
+      <div data-ix="on-load-display-none" class="close" style="opacity: 0;">X</div>
+    </div>
+    <nav class="w-dropdown-list bubble-out-list"><a href="<?php echo home_url(); ?>/#contacts" data-ix="bubble-out-top" class="w-dropdown-link link-1">Вызвать курьера</a><a href="tel:+79255783944" rel="nofollow" data-ix="bubble-out-top" class="w-dropdown-link link-1 _2">Позвонить</a></nav>
+  </div>
+  <div class="w-section w-hidden-main w-hidden-medium section">
+    <div class="w-hidden-main w-hidden-medium mobile-logo"><img width="160" src="<?php echo get_template_directory_uri(); ?>/img/5609c7cbe8857b0f12003888_logo-toner.png" alt="<?php wp_title( '' ); ?>"">
+      <div class="w-hidden-main w-hidden-medium text-head-mobile">Скупка картриджей</div>
+    </div>
+  </div>
 
-      <div class="logo">
-        <?php if ( !is_front_page() && !is_home() ){ ?>
-          <a href="<?php echo home_url(); ?>">
-        <?php } ?>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="<?php wp_title( '' ); ?>" title="<?php wp_title( '' ); ?>" class="logo-img">
-        <?php if ( !is_front_page() && !is_home() ){ ?>
-          </a>
-        <?php } ?>
-      </div><!-- /logo -->
-
-      <nav class="nav" role="navigation">
-        <?php wpeHeadNav(); ?>
-      </nav><!-- /nav -->
-
-    </div><!-- /.inner -->
-  </header><!-- /header -->
-
-  <section role="main">
-    <div class="inner">
+  <?php get_sidebar(); ?>

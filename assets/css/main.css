@@ -1598,6 +1598,10 @@ body {
   margin: 0;
 }
 
+body.tax-categories .separator-home {
+  display: none;
+}
+
 article,
 aside,
 details,
@@ -1901,7 +1905,6 @@ html.w-mod-touch * {
 }
 
 .w-preserve-3d {
-  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 
@@ -4306,7 +4309,7 @@ div.head-text-overlay-form {
   padding: 25px 50px 95px;
   text-align: center;
   border-bottom: 2px none #e0e0e0;
-  background-image: url("../images/5609c7cbe8857b0f120038cb_53ad9b6f4f02f4e04bcd5642_home_hero_background-x2-v5.jpg");
+  background-image: url("../img/5609c7cbe8857b0f120038cb_53ad9b6f4f02f4e04bcd5642_home_hero_background-x2-v5.jpg");
   background-repeat: repeat;
   background-attachment: scroll;
   background-position: 50% 100%;
@@ -4327,7 +4330,7 @@ div.head-text-overlay-form {
   padding-left: 15px;
   text-align: center;
   background-color: transparent;
-  background-image: linear-gradient(4deg, rgba(255, 255, 255, 0.5) 35%, #ffffff), url("../images/5609c7cbe8857b0f120038cc_Geo-map-europe-russia.png");
+  background-image: linear-gradient(4deg, rgba(255, 255, 255, 0.5) 35%, #ffffff), url("../img/5609c7cbe8857b0f120038cc_Geo-map-europe-russia.png");
   background-repeat: repeat, no-repeat;
   background-position: 0 0, 50% 0;
   background-size: auto, 1200px;
@@ -4426,7 +4429,7 @@ div.head-text-overlay-form {
   -webkit-transition: all 100ms ease;
   transition: all 100ms ease;
   background-color: transparent;
-  background-image: url("../images/560a792f0bafb24648a28965_brothers_202.png");
+  background-image: url("../img/560a792f0bafb24648a28965_brothers_202.png");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
@@ -4500,7 +4503,7 @@ div.head-text-overlay-form {
 .link-brand-block.call {
   border: 4px solid #0078d7;
   background-color: #ffffff;
-  background-image: url("../images/560a7af061b261444831d40c_tel_mark_free.png");
+  background-image: url("../img/560a7af061b261444831d40c_tel_mark_free.png");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: contain;
@@ -4509,7 +4512,7 @@ div.head-text-overlay-form {
 .link-brand-block.call:hover {
   border: 4px solid #0078d7;
   background-color: #0078d7;
-  background-image: url("../images/560a7af061b261444831d40c_tel_mark_free.png");
+  background-image: url("../img/560a7af061b261444831d40c_tel_mark_free.png");
   background-position: 50% 50%;
   background-size: contain;
 }
@@ -5232,7 +5235,7 @@ div.head-text-overlay-form {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   background-color: transparent;
-  background-image: url("../images/560accf813b67dda4015040b_timeline%20point%20left%20white.png"), url("../images/560accd6491b0bd0044ab827_timeline%20point%20right%20white.png"), url("http://uploads.webflow.com/5609c7cb9cc6b00f12ada549/560acc1613b67dda401503c6_a_hero-top-triangle%20right.png"), url("http://uploads.webflow.com/5609c7cb9cc6b00f12ada549/560ac966e4fbd96401883de5_a_hero-top-triangle2.png"), url("../images/5609c7cbe8857b0f12003896_hero-background-keeping-time-josh-overton-graphics-2.png");
+  background-image: url("../img/560accf813b67dda4015040b_timeline point left white.png"), url("../img/560accd6491b0bd0044ab827_timeline point right white.png"), url("http://uploads.webflow.com/5609c7cb9cc6b00f12ada549/560acc1613b67dda401503c6_a_hero-top-triangle%20right.png"), url("http://uploads.webflow.com/5609c7cb9cc6b00f12ada549/560ac966e4fbd96401883de5_a_hero-top-triangle2.png"), url("../img/5609c7cbe8857b0f12003896_hero-background-keeping-time-josh-overton-graphics-2.png");
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
   background-position: 100% 0, 0 0, 100% 0, 0 0, 50% 50%;
   background-size: 64px, 64px, contain, contain, cover;
@@ -6345,7 +6348,7 @@ div.head-text-overlay-form {
 }
 
 .client-logo-holder.sukhoi {
-  background-image: url("../images/5609c7cbe8857b0f12003884_Сухой.jpg");
+  background-image: url("../img/5609c7cbe8857b0f12003884_Сухой.jpg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: contain;
@@ -6367,7 +6370,7 @@ div.head-text-overlay-form {
 
 .color-logo {
   border: 1px none #000000;
-  background-image: url("../images/5609c7cbe8857b0f12003884_Сухой.jpg");
+  background-image: url("../img/5609c7cbe8857b0f12003884_Сухой.jpg");
   background-position: 50% 50%;
   background-size: 125px;
 }
@@ -7377,7 +7380,7 @@ div.head-text-overlay-form {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   background-color: #0078d7;
-  background-image: url("../images/5609c7cbe8857b0f120038cc_Geo-map-europe-russia.png");
+  background-image: url("../img/5609c7cbe8857b0f120038cc_Geo-map-europe-russia.png");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: 50% 50%;
@@ -9122,6 +9125,37 @@ p.title-column::before {
 
 a.agreement-link {
   color: #ffffff;
+}
+
+.skyp-brend {
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+
+.skyp-brend a > img {
+  display: inline-block;
+  margin-bottom: .5rem;
+}
+
+.skyp-brend > a {
+  font-size: 13px;
+  display: inline-block;
+  width: 210px;
+  margin-bottom: 2rem;
+  padding: 1rem 0;
+  text-decoration: none;
+  background: #f5f5f5;
+}
+
+.breadcrumb {
+  list-style: none;
+  padding: 0;
+}
+
+.breadcrumb li {
+  margin: 0 5px;
+  display: inline-block;
 }
 
 /* Slider */

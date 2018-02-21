@@ -1,10 +1,15 @@
 <?php get_header(); ?>
-  <article>
 
-    <h1 class="cat-title inner-title"><?php the_category(', '); ?></h1>
+  <header class="entry-header">
+    <h1><?php the_category(', '); ?></h1>
+  </header>
+
+  <article class="page-template-template-skupka">
+
     <?php get_template_part('loop'); ?>
+
     <?php get_template_part('pagination'); ?>
 
   </article>
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>
