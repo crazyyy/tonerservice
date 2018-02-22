@@ -38,7 +38,7 @@ function wpeStyles()  {
   wp_dequeue_style('fancybox');
   wp_dequeue_style('wp_dequeue_style');
 
-  wp_register_style('wpeasy-style', get_template_directory_uri() . '/css/main.css', array(), '1.0', 'all');
+  wp_register_style('wpeasy-style', get_template_directory_uri() . '/css/main.css', array(), '1.1', 'all');
   wp_enqueue_style('wpeasy-style'); // Enqueue it!
 }
 
@@ -515,7 +515,7 @@ function easy_breadcrumbs() {
             } else if(!empty($cat_id)) {
 
                 echo '<li class="item-cat item-cat-' . $cat_id . ' item-cat-' . $cat_nicename . '"><a class="bread-cat bread-cat-' . $cat_id . ' bread-cat-' . $cat_nicename . '" href="' . $cat_link . '" title="' . $cat_name . '">' . $cat_name . '</a></li>';
-
+                echo '<li class="separator"> ' . $separator . ' </li>';
                 echo '<li class="item-current item-' . $post->ID . '"><span class="bread-current bread-' . $post->ID . '" title="' . get_the_title() . '">' . get_the_title() . '</span></li>';
 
             } else {
@@ -731,5 +731,14 @@ function taxonomies_category() {
   );
   register_taxonomy( 'categories', array( 'product' ), $args );
 }
+
+
+add_action( 'pre_get_posts', function( $query ) {
+  // Check that it is the query we want to change: front-end search query
+  if( $query->is_main_query() && ! is_admin() && $query->is_search() ) {
+    // Change the query parameters
+    $query->set( 'posts_per_page', 500 );
+  }
+} );
 
 ?>

@@ -12,6 +12,9 @@ body {
       display: none;
     }
   }
+  &.page-template-page-ajaxprice {
+    padding: 0;
+  }
 }
 
 article,
@@ -8664,9 +8667,7 @@ p.title-column {
     display: inline;
 
     cursor: pointer;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
+
             user-select: none;
   }
 }
@@ -8729,5 +8730,10 @@ a.agreement-link {
   li {
     margin: 0 5px;
     display: inline-block;
+  }
+}
+#wpcf7-f1129-o2 {
+  textarea {
+    height: 70px !important;
   }
 }

@@ -1602,6 +1602,10 @@ body.tax-categories .separator-home {
   display: none;
 }
 
+body.page-template-page-ajaxprice {
+  padding: 0;
+}
+
 article,
 aside,
 details,
@@ -9096,9 +9100,6 @@ p.title-column::before {
 .soglasie label {
   display: inline;
   cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
@@ -9156,6 +9157,10 @@ a.agreement-link {
 .breadcrumb li {
   margin: 0 5px;
   display: inline-block;
+}
+
+#wpcf7-f1129-o2 textarea {
+  height: 70px !important;
 }
 
 /* Slider */

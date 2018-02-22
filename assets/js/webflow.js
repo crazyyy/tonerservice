@@ -6784,21 +6784,42 @@ function initBtn() {
   });
 }(function($, d) {
   $(d).ready(function() {
-    const mobileMenu = $(".w-nav-menu").find(".menu");
+    var mobileMenu = $(".w-nav-menu").find(".menu");
     mobileMenu.prepend('<li class="menu-item menu-item-type-post_type menu-item-object-page">' + '<a href="/">Главная</a>' + '</li>');
     $("#loadPrice").wrap('<div class="c-psevdoScroll"></div>');
+
     $(".tabs-menu-price").wrap('<div class="c-psevdoScroll"></div>');
+
     if ($(".table--price-list")[0]) {
       $(".table--price-list").before('<h2 class="c-test">' + $(".table--price-list").find('h2').html() + '</h2>');
     }
+
     $(".table--price-list").wrap('<div class="c-psevdoScroll"></div>');
-    const price = $(".c-psevdoScroll").before('<div><div class="c-scrollTop"><div class="c-scrollTop__inner"></div></div></div>');
+
+    var price = $(".c-psevdoScroll").before('<div><div class="c-scrollTop"><div class="c-scrollTop__inner"></div></div></div>');
+
     $(".c-scrollTop").scroll(function() {
       console.log($(".c-psevdoScroll"));
       $(".c-psevdoScroll").scrollLeft($(this).scrollLeft());
     });
+
     $(".c-psevdoScroll").scroll(function() {
       $(".c-scrollTop").scrollLeft($(this).scrollLeft());
     });
+
   });
 }(jQuery, document));
+jQuery(document).ready(function($) {
+  $('#s-checkbox_modal').on('click', function(e){
+    $('#but-modal').toggleClass('dis');
+  })
+  $('#s-checkbox_delivery').on('click', function(e){
+    $('#but-delivery').toggleClass('dis');
+  })
+  $('#s-checkbox_price').on('click', function(e){
+    $('#but-price').toggleClass('dis');
+  })
+  $('#s-checkbox ').on('click', function(e){
+    $('#but-modal').toggleClass('dis');
+  })
+});

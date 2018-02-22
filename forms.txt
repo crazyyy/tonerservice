@@ -1,0 +1,40 @@
+Контакт в подвал
+[text text-925 class:w-input placeholder "Введите ваше имя"]
+<br>
+[text text-925 class:w-input placeholder "Номер телефона"]
+<br>
+[textarea textarea-428 class:area class:w-input class:text-field-form-overlay class:model-cartr placeholder "Введите модели картриджей (необязательно)"]
+<div class="soglasie">
+  [checkbox soglasie_check id:s-checkbox "Отправляя персональные данные из данной формы, я даю согласие на обработку персональных данных"]
+</div>
+[submit id:but-modal class:w-button class:submit-button-section-contacts class:dis "Отправить заявку"]
+
+Точно модалка в прайсе
+<label for="node-9" class="text-search-toner">Не нашли свой картридж? Заполните форму и мы вам перезвоним!</label>
+[select menu-323 class:w-select class:search-toner-field "Выберите принтер" "Brother" "Canon" "HP" "Kyocera" "Panasonic" "Samsung" "Xerox"]
+[text text-869 class:w-input class:search-toner-field placeholder "Введите модель картриджа"]
+[text text-869 class:w-input class:search-toner-field placeholder "Номер телефона"]
+[submit id:but-price class:w-button class:submit-button-price class:dis "Отправить"]
+<div class="soglasie">
+  [checkbox soglasie_check_price id:s-checkbox_price "Отправляя персональные данные из данной формы, я даю согласие на обработку персональных данных"]
+</div>
+
+Контактная форма
+<label for="node-4" class="name-form">Вызвать курьера сейчас:&nbsp;</label>
+[text node-4 id:node-4 class:w-input class:text-field-form placeholder "Введите ваше имя"]
+[text node-5 id:node-5 class:w-input class:text-field-form placeholder "Введите номер телефона"]
+<div class="soglasie">
+  [checkbox soglasie_check_delivery id:s-checkbox_delivery "Отправляя персональные данные из данной формы, я даю согласие на обработку персональных данных"]
+</div>
+[submit id:but-delivery class:w-button class:submit-button class:dis "Вызвать (бесплатно)"]
+
+Модалка картриджей
+[text text-925 class:w-input class:text-field-form-overlay placeholder "Введите ваше имя"]
+<br>
+[text text-925 class:w-input class:text-field-form-overlay placeholder "Введите номер телефона"]
+<br>
+[textarea textarea-428 class:area class:w-input class:text-field-form-overlay class:model-cartr placeholder "Введите модели картриджей (необязательно)"]
+<div class="soglasie">
+  [checkbox soglasie_check_modal id:s-checkbox_modal "Отправляя персональные данные из данной формы, я даю согласие на обработку персональных данных"]
+</div>
+[submit id:but-modal class:w-button class:submit-button class:dis "Отправить заявку"]

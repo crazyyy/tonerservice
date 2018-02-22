@@ -41,7 +41,7 @@
               <div class="price-text-block"><?php the_field('price_used_wo_box'); ?></div>
             </div>
             <div  class="w-col w-col-new w-col-12">
-              <a class="popup-with-move-anim btnPop" href="/#small-dialog">Продать</a>
+              <a class="popup-with-move-anim btnPop" href="#small-dialog">Продать</a>
             </div>
           </div>
         </div>

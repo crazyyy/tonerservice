@@ -42,27 +42,7 @@
         <div class="w-col w-col-6">
           <div class="form_label_blck9">МЫ ВАМ ПЕРЕЗВОНИМ</div>
           <div class="w-form">
-            <div role="form" class="wpcf7" id="wpcf7-f33-o4" lang="ru-RU" dir="ltr">
-              <div class="screen-reader-response"></div>
-              <form action="http://tonerservice.ru/novosti/%d0%b1%d0%be%d0%bb%d1%8c%d1%88%d0%b5-%d0%b2%d1%81%d0%b5%d0%b3%d0%be-%d1%81%d1%82%d1%80%d1%83%d0%b9%d0%bd%d0%b8%d0%ba%d0%be%d0%b2-%d1%82%d0%b5%d0%bf%d0%b5%d1%80%d1%8c-%d0%bf%d1%80%d0%be/#wpcf7-f33-o4" method="post" class="wpcf7-form" novalidate="novalidate" onclick="yaCounter32777385.reachGoal(&#39;vyzov&#39;); return true;">
-                <div style="display: none;">
-                  <input type="hidden" name="_wpcf7" value="33">
-                  <input type="hidden" name="_wpcf7_version" value="4.4">
-                  <input type="hidden" name="_wpcf7_locale" value="ru_RU">
-                  <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f33-o4">
-                  <input type="hidden" name="_wpnonce" value="78218f0969">
-                </div>
-                <p><span class="wpcf7-form-control-wrap text-467"><input type="text" name="text-467" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required w-input" aria-required="true" aria-invalid="false" placeholder="Ваше имя"></span>
-                  <span class="wpcf7-form-control-wrap text-468"><input type="text" name="text-468" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required w-input" aria-required="true" aria-invalid="false" placeholder="Номер телефона"></span></p>
-                <div class="soglasie">
-                  <input type="checkbox" name="soglasie_check" id="s-checkbox" onclick="jQuery(&#39;.submit-button-section-contacts&#39;).toggleClass(&#39;dis&#39;);">
-                  <label for="s-checkbox">Отправляя персональные данные из данной формы, я даю <a href="http://tonerservice.ru/agreement/" target="_blank">согласие на обработку персональных данных</a></label>
-                </div>
-                <p>
-                  <input type="submit" value="Отправить" class="wpcf7-form-control wpcf7-submit w-button submit-button-section-contacts dis"><img class="ajax-loader" src="<?php echo get_template_directory_uri(); ?>/img/ajax-loader.gif" alt="Отправка..." style="visibility: hidden;"></p>
-                <div class="wpcf7-response-output wpcf7-display-none"></div>
-              </form>
-            </div>
+            <?php echo do_shortcode('[contact-form-7 id="1131" title="Контакт в подвал"]'); ?>
           </div>
         </div>
       </div>
@@ -111,13 +91,13 @@
           <div class="text-block">&copy; <?php echo date("Y"); ?>. <?php bloginfo('name'); ?>. Все права защищены.</div>
         </div>
         <div class="w-col w-col-3">
-          <div class="text-block"><a href="http://tonerservice.ru/agreement/" class="agreement-link">Соглашение об обработке персональных данных</a></div>
+          <div class="text-block"><a href="/agreement/" class="agreement-link">Соглашение об обработке персональных данных</a></div>
         </div>
         <div class="w-col w-col-3">
           <div class="text-block tel-number-mobile">+7 (495) 20-43-557</div>
         </div>
         <div class="w-col w-col-3">
-          <div class="text-block"><a href="http://tonerservice.ru/sitemap/" id="sitemap_link">Карта сайта</a></div>
+          <div class="text-block"><a href="<?php echo home_url(); ?>/sitemap/" id="sitemap_link">Карта сайта</a></div>
         </div>
       </div>
     </div>
@@ -127,7 +107,7 @@
         <div class="w-col w-col-6"></div>
         <div class="w-col w-col-6">
           <div class="w-embed">
-           <img src="http://counter.yadro.ru/logo?44.4" title="LiveInternet" alt="" border="0" width="0" height="0" style="display: none !important; visibility: hidden !important; opacity: 0 !important; background-position: 0px 0px;">
+            <!-- counter -->
           </div>
         </div>
       </div>
@@ -148,7 +128,7 @@
           <label for="s-checkbox_modal">Отправляя персональные данные из данной формы, я даю <a href="http://tonerservice.ru/agreement/" target="_blank">согласие на обработку персональных данных</a></label>
         </div>
         <p>
-          <input type="submit" value="Отправить заявку" class="wpcf7-form-control wpcf7-submit w-button dis" id="but-modal"><img class="ajax-loader" src="<?php echo get_template_directory_uri(); ?>/img/ajax-loader.gif" alt="Отправка..." style="visibility: hidden;"></p>
+          <input type="submit" value="Отправить заявку" class="wpcf7-form-control wpcf7-submit w-button dis" id="but-modal"></p>
       </form>
     </div>
   </div>
@@ -161,14 +141,14 @@
   <script type="text/javascript">
   jQuery(function() {
     jQuery('.link-brand-block').on('click', function() {
-      jQuery('#loadPrice').html('<img src=\"<?php echo get_template_directory_uri(); ?>/img/ajax-loader.gif\">&nbsp;<span>Пожалуйста, подождите. Идёт загрузка..</span>');
+      jQuery('#loadPrice').html('<img src="<?php echo get_template_directory_uri(); ?>/img/ajax-loader.gif">&nbsp;<span>Пожалуйста, подождите. Идёт загрузка..</span>');
     });
   });
   </script>
   <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.form.min.js"></script>
-  <script src="<?php echo get_template_directory_uri(); ?>/js/webflow.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/webflow.js?20180222"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.magnific-popup.min.js"></script>
-  <script src="<?php echo get_template_directory_uri(); ?>/js/scripts.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/scripts.js?20180222"></script>
 
 </body>
 </html>
