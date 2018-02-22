@@ -116,23 +116,8 @@
   <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
   <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
     <div class="h4">Оставьте заявку</div>
-    <div role="form" class="wpcf7" id="wpcf7-f118-o5" lang="ru-RU" dir="ltr">
-      <div class="screen-reader-response"></div>
-      <form action="/#wpcf7-f118-o5" method="post" class="wpcf7-form" novalidate="novalidate">
-
-        <p><span class="wpcf7-form-control-wrap text-355"><input type="text" name="text-355" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required w-input text-field-form-overlay" aria-required="true" aria-invalid="false" placeholder="Введите ваше имя"></span>
-          <span class="wpcf7-form-control-wrap text-356"><input type="text" name="text-356" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required w-input text-field-form-overlay" aria-required="true" aria-invalid="false" placeholder="Введите номер телефона"></span>
-          <span class="wpcf7-form-control-wrap textarea-913"><textarea name="textarea-913" cols="40" rows="2" class="wpcf7-form-control wpcf7-textarea w-input text-field-form-overlay model-cartr" aria-invalid="false" placeholder="Введите модели картриджей (необязательно)"></textarea></span></p>
-        <div class="soglasie">
-          <input type="checkbox" name="soglasie_check_modal" id="s-checkbox_modal" onclick="jQuery(&#39;#but-modal&#39;).toggleClass(&#39;dis&#39;);">
-          <label for="s-checkbox_modal">Отправляя персональные данные из данной формы, я даю <a href="http://tonerservice.ru/agreement/" target="_blank">согласие на обработку персональных данных</a></label>
-        </div>
-        <p>
-          <input type="submit" value="Отправить заявку" class="wpcf7-form-control wpcf7-submit w-button dis" id="but-modal"></p>
-      </form>
-    </div>
+    <?php echo do_shortcode('[contact-form-7 id="1131" title="Контакт в подвал"]'); ?>
   </div>
-
 
   <?php wp_footer(); ?>
   <script src="<?php echo get_template_directory_uri(); ?>/js/webfont.js"></script>
